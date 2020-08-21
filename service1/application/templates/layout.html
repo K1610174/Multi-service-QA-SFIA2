@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }} - Page</title>
+        <style>
+            body {
+                background-color:rgb(154, 202, 173);
+                text-align: center;
+            }
+            h1 {
+                color:#30166e; 
+                font-family:Comic Sans MS, cursive, sans-serif;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                color: #ffffff;
+                background-color: #30166e;
+                border-radius: 6px;
+                outline: none;
+            }
+        
+            .home {
+                margin: 0;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        
+        </style>
+        
+    </head>
+
+    <body>
+        {% block body_content %}
+        {% endblock body_content %}
+    </body>
+
+</html>
