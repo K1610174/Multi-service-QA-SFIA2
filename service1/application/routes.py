@@ -1,5 +1,6 @@
 from flask import render_template, redirect, url_for
-from application import app
+from application import app, db
+from application.models import Fortunes
 import requests
 
 @app.route('/')
@@ -14,5 +15,9 @@ def generate():
     response2 = requests.get("http://34.105.215.43:5002/starsign")    # ("http://service3:5002/starsign")
     data=[response1.text,response2.text]
     response3 = requests.post("http://34.105.215.43:5003/fortune",data=data[0] ) # http://service4:5003/fortune
+
+    fortunes=Fortunes(color=response1.text,starsign=response2.text,fortune=response3.text)
+    db.session.add(fortunes)
+    db.session.commit()
 
     return render_template('color.html',title='Services', color=response1.text, starsign=response2.text, fortune=response3.text)
