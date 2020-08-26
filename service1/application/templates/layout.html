@@ -37,8 +37,13 @@
     </head>
 
     <body>
-        {% block body_content %}
-        {% endblock body_content %}
+        <div class="nav">
+            <a href="{{ url_for('home') }}">Home</a>
+        </div>
+        <div>
+            {% block body_content %}
+            {% endblock body_content %}
+        </div>
     </body>
 
 </html>

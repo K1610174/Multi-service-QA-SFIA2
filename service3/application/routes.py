@@ -7,6 +7,6 @@ import random
 @app.route('/starsign', methods=['GET'])
 def starsign():
     starsign_list=["Aries","Taurus","Gemini","Cancer","Leo", "Virgo",
-    "Libra","Scorpio","Scorpio","Sagittarius","Capricorn","Aquarius"]
+    "Libra","Scorpio","Sagittarius","Capricorn","Aquarius"]
     starsign = random.choice(starsign_list)
     return Response(starsign, mimetype='text/plain')

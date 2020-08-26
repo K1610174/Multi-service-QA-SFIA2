@@ -6,6 +6,6 @@ import random
 @app.route('/')
 @app.route('/color', methods=['GET'])
 def color():
-    color_list=["red","orange","yellow","green","blue","indigo","violet"]
+    color_list=["red","orange","yellow","green","blue","indigo","violet","ivory","gray","black","pink"]
     color = random.choice(color_list)
     return Response(color, mimetype='text/plain')
