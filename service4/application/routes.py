@@ -10,11 +10,11 @@ def fortune():
     if response['color'] == "green" or response['starsign']=="Aries":
         fortune = "Change is certain, be accepting."
     elif response['color']=="red" or response['starsign']=="Taurus":
-        fortune= "A smiling stranger will bring you some troubling news."
+        fortune= "A stranger will bring you some news."
     elif response['color']=="yellow" or response['starsign']=="Gemini":
         fortune= "You are free to invent your life."
     elif response['color']=="violet" or response['starsign']=="Cancer":
-        fortune= "Avert misunderstanding by calm, poise, and balance."
+        fortune= "Avert misunderstanding by calm and poise."
     elif response['color']=="orange" or response['starsign']=="Leo":
         fortune= "A dream you have will come true."
     elif response['color']=="indigo" or response['starsign']=="Virgo":
@@ -24,9 +24,9 @@ def fortune():
     elif response['color']=="black" or response['starsign']=="Capricorn":
         fortune= "Be assertive when decisive action is needed."
     elif response['color']=="pink" or response['starsign']=="Scorpio":
-        fortune= "You will travel to many exotic places in your lifetime."
+        fortune= "You will travel to many exotic places."
     elif response['color']=="gray" or response['starsign']=="Sagittarius":
-        fortune= "If you feel you are right, stand firmly by your convictions."
+        fortune= "Stand firmly by your convictions."
     elif response['color']=="ivory" or response['starsign']=="Libra":
         fortune= "It better to be the hammer than the nail."
     else:

@@ -19,4 +19,4 @@ def generate():
     db.session.add(fortunes)
     db.session.commit()
     
-    return render_template('color.html',title='Services',fortune=response3.text)
+    return render_template('color.html',title='Fortunes',fortune=response3.text)
