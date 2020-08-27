@@ -32,7 +32,7 @@ class TestBase(TestCase):
         db.drop_all()
 
 
-class TestResponse(TestBase):
+class TestResponseS1(TestBase):
     def test_generate(self):
         with self.client:
             with requests_mock.Mocker() as r:

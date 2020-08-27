@@ -10,7 +10,7 @@ class TestBase(TestCase):
     def create_app(self):
         return app
     
-class TestService4(TestBase):
+class TestResponseS4(TestBase):
     def test_fortune_1(self):
         with patch('requests.get') as g:
 

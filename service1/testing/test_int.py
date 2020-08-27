@@ -42,8 +42,6 @@ class TestBase(LiveServerTestCase):
 
 class TestHome(TestBase):
     def test_home(self):
-        #/html/body/div[1]/a home nav link
-        #/html/body/div[2]/div/a  generate button
         self.driver.find_element_by_xpath("/html/body/div[1]/a").click()
         time.sleep(1)
         self.driver.find_element_by_xpath("/html/body/div[2]/div/a").click()
@@ -53,7 +51,6 @@ class TestHome(TestBase):
 
 class TestGetRandom(TestBase):
     def test_back_to_home(self):
-        #/html/body/div[1]/a
         self.driver.find_element_by_xpath("/html/body/div[1]/a").click()
         time.sleep(1)
 

@@ -9,9 +9,9 @@ class TestBase(TestCase):
     def create_app(self):
         return app
 
-class TestResponse(TestBase):
+class TestResponseS3(TestBase):
 
-    def test_color(self):
+    def test_starsign(self):
         with patch('requests.get') as c:
             c.return_value.text = "Leo"
 
