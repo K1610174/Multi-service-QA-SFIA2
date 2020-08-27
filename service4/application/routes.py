@@ -4,7 +4,7 @@ import requests
 import random
 
 @app.route('/')
-@app.route('/fortune', methods=['POST'])
+@app.route('/fortune', methods=['GET','POST'])
 def fortune():
     response=request.get_json()
     if response['color'] == "green" or response['starsign']=="Aries":
