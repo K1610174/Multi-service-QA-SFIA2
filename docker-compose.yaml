@@ -1,5 +1,17 @@
 version: '3.7'
 services:
+  nginx:
+    image: nginx
+    deploy:
+      replicas: 2
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
   service1:
     build: ./service1
     ports:
@@ -10,6 +22,7 @@ services:
       replicas: 2
     environment:
       MYSQL_DB: ${MYSQL_DB}
+      TEST_DB: ${TEST_DB}
   service2:
     build: ./service2
     ports:
