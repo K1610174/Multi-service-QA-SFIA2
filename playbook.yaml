@@ -1,4 +1,4 @@
-- hosts: docker
+- hosts: all
   become: true
   roles:
     - docker
