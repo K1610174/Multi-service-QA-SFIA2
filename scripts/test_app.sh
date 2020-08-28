@@ -1,5 +1,5 @@
 #! /bin/bash
-
+cd QA-SFIA2
 #test service1
 cd service1
 python -m venv venv
