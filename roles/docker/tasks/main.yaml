@@ -1,4 +1,4 @@
-- name: Install docker requirements
+- name: 'Install docker requirements'
   apt:
     pkg:
     - apt-transport-https
@@ -6,28 +6,28 @@
     - curl
     - gnupg-agent
     - software-properties-common
-    status: latest
-    update_cache: true
-- name: Add GPG Key
+    state: latest
+    update_cache: true   
+- name: 'Add GPG key'
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
-    status: present
-- name: Add apt-repo
+    state: present
+- name: 'Add apt-repo'
   apt_repository:
     repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename|lower }} stable
-- name: Install docker
+- name: 'Install docker'
   apt:
     pkg:
     - docker-ce
     - docker-ce-cli
     - containerd.io
-    status: latest
-    update_cache: true
-- name: Create docker group
+    state: latest
+    update_cache: true 
+- name: 'Create docker group'
   group:
     name: "docker"
     state: present
-- name: "Adding user karugaba to docker group"
+- name: 'Adding user karugaba to docker group'
   user:
     name: "karugaba"
     groups: "docker"

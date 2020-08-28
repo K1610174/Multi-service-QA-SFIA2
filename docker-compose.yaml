@@ -2,8 +2,6 @@ version: '3.7'
 services:
   nginx:
     image: nginx
-    deploy:
-      replicas: 2
     ports:
       - target: 80
         published: 80
@@ -13,6 +11,7 @@ services:
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
   service1:
+    image: service1
     build: ./service1
     ports:
       - target: 5000
@@ -24,6 +23,7 @@ services:
       MYSQL_DB: ${MYSQL_DB}
       TEST_DB: ${TEST_DB}
   service2:
+    image: service2
     build: ./service2
     ports:
       - target: 5001
@@ -32,6 +32,7 @@ services:
     deploy:
       replicas: 2
   service3:
+    image: service3
     build: ./service3
     ports:
       - target: 5002
@@ -40,6 +41,7 @@ services:
     deploy:
       replicas: 2
   service4:
+    image: service4
     build: ./service4
     ports:
       - target: 5003
