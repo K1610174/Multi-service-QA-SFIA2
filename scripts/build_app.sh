@@ -19,5 +19,5 @@ ansible-playbook -i inventory.cfg playbook.yaml
 #build images using docker
 source ~/.bashrc
 #docker-compose build
-docker-compose up -d
+sudo docker-compose up -d
 #docker login
