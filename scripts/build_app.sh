@@ -18,7 +18,8 @@ ansible-playbook -i inventory.cfg playbook.yaml
 
 #build images using docker
 source ~/.bashrc
-sudo su - jenkins
+sudo usermod -aG docker $(whoami)
+newgrp docker
 docker-compose build
 #docker-compose up -d
 #docker login
