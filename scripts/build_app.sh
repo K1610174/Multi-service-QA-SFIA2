@@ -3,6 +3,7 @@
 #install ansible and run playbook
 sudo apt-get update
 sudo apt-get install python -y
+pwd
 whoami
 #mkdir -p ~/.local/bin
 #echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
