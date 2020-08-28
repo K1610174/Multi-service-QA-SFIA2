@@ -11,8 +11,8 @@ pip3 install --user ansible
 #~/.local/bin/ansible --version
 pwd
 which ansible
-/var/lib/jenkins/workspace/sfia2/.local/bin/ansible --version
-/var/lib/jenkins/workspace/sfia2/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
+/var/lib/jenkins/.local/bin/ansible --version
+/var/lib/jenkins/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
 docker --version
 docker-compose --version
 
