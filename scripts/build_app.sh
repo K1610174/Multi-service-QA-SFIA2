@@ -3,23 +3,18 @@
 #install ansible and run playbook
 sudo apt-get update
 sudo apt-get install python -y
+whoami
 mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
+sudo chown -R $(whoami):$(whoami) ~/*
 source ~/.bashrc
 pip3 install --user ansible
-ansible --version
+~/.local/bin/ansible --version
 
-#clone git repo
-if ![-d chaperootodo_client]; then
-    git clone https://github.com/K1610174/QA-SFIA2.git
-fi
 
-ansible-playbook -i inventory.cfg playbook.yaml
+~/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
 
 #build images using docker
-source ~/.bashrc
-sudo usermod -aG docker $(whoami)
-newgrp docker
 docker-compose build
 #docker-compose up -d
 #docker login
