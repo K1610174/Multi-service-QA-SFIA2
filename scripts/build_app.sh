@@ -20,8 +20,4 @@ ansible-playbook -i inventory.cfg playbook.yaml
 source ~/.bashrc
 #docker-compose build
 docker-compose up -d
-docker login
-docker push kkeki/service1:latest
-docker push kkeki/service2:latest
-docker push kkeki/service3:latest
-docker push kkeki/service4:latest
+#docker login
