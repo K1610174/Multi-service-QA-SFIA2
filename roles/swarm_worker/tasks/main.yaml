@@ -7,12 +7,12 @@
 - name: Add node
   docker_swarm:
     state: join
-    advertise_addr: vm-1
-    join_token: "{{ hostvars[groups['swarm_init'][0]]['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
-    remote_addrs: sfia2-instance:2377
+    advertise_addr: worker-vm-1
+    join_token: "{{ hostvars[groups['swarm_manager'][0]]['docker_swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: manager-vm-1:2377
 - name: Add node
   docker_swarm:
     state: join
-    advertise_addr: vm-2
-    join_token: "{{ hostvars[groups['swarm_init'][0]]['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
-    remote_addrs: sfia2-instance:2377
+    advertise_addr: worker-vm-2
+    join_token: "{{ hostvars[groups['swarm_manager'][0]]['docker_swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: manager-vm-1:2377
