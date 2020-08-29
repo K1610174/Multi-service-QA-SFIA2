@@ -14,7 +14,7 @@ pip3 install --user ansible
 docker --version
 docker-compose --version
 
-~/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
+~/.local/bin/ansible-playbook -i /var/lib/jenkins/workspace/sfia2/inventory.cfg playbook.yaml
 
 #build images using docker
 docker-compose build
