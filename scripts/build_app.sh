@@ -2,7 +2,7 @@
 
 #install ansible and run playbook
 sudo apt-get update
-sudo apt-get install python -y
+sudo apt-get install python3 -y
 mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 #sudo chown -R $(whoami):$(whoami) ~/*
