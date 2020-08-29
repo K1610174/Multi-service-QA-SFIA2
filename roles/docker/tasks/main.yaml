@@ -7,7 +7,7 @@
     - gnupg-agent
     - software-properties-common
     state: latest
-    update_cache: true   
+    update_cache: true
 - name: 'Add GPG key'
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
