@@ -36,7 +36,6 @@ docker service scale appstack_service1=2
 docker service scale appstack_service2=2
 docker service scale appstack_service3=2
 docker service scale appstack_service4=2
-docker service scale appstack_nginx=2
 docker stack services appstack
 ls
 EOF
