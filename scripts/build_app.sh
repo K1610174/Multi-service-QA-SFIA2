@@ -15,7 +15,7 @@ docker-compose --version
 #build images using docker
 export MYSQL_DB=mysql+pymysql://root:1234@database:3306/fortune
 export MYSQL_ROOT_PASSWORD=1234
-export TEST_DB_URI="mysql+pymysql://root:sqldatabase@34.89.57.102:3306/fortune"
-docker-compose build
-#docker-compose up -d
+export TEST_DB="mysql+pymysql://root:sqldatabase@34.89.57.102:3306/fortune"
+#docker-compose build
+docker-compose up -d
 #docker login
