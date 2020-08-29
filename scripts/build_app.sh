@@ -9,13 +9,10 @@
 #source ~/.bashrc
 #pip3 install --user ansible
 ~/.local/bin/ansible --version
-#/var/lib/jenkins/.local/bin/ansible --version
-#/var/lib/jenkins/.local/bin/ansible-playbook -v -i /var/lib/jenkins/workspace/sfia2/inventory.cfg playbook.yaml
-
-~/.local/bin/ansible-playbook -v -i inventory.cfg playbook.yaml
+~/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
 docker --version
 docker-compose --version
 #build images using docker
-#docker-compose build
+docker-compose build
 #docker-compose up -d
 #docker login
