@@ -10,7 +10,6 @@ cd QA-SFIA2
 cd service1
 python3 -m venv venv
 . venv/bin/activate
-pip3 install pymsql
 pip3 install -r requirements.txt
 python3 -m pytest --cov application --cov-report term-missing
 cd ..
@@ -40,5 +39,5 @@ python3 -m pytest --cov application --cov-report term-missing
 cd ..
 
 cd ..
-rm -r QA-SFIA2
+rm -rf QA-SFIA2
 EOF
