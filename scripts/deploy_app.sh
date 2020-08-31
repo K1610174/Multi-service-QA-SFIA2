@@ -11,11 +11,6 @@ ssh manager-vm-1 << EOF
 export MYSQL_DB="$MYSQL_DB"
 export MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD"
 export TEST_DB="$TEST_DB"
-docker images
-docker rmi kkeki/service1:latest
-docker rmi kkeki/service2:latest
-docker rmi kkeki/service3:latest
-docker rmi kkeki/service4:latest
 
 git clone https://github.com/K1610174/QA-SFIA2.git
 cd QA-SFIA2
@@ -25,6 +20,7 @@ docker pull kkeki/service3:latest
 docker pull kkeki/service4:latest
 
 docker stack deploy --compose-file docker-compose.yaml appstack
+docker-compose ps
 docker container ls -a
 docker stack services appstack
 cd ..
