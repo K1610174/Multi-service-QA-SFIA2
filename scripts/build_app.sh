@@ -15,5 +15,3 @@ echo "Now building ... "
 docker system prune -f
 docker-compose build
 docker images
-docker login 
-docker-compose push
