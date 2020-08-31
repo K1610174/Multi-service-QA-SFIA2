@@ -10,6 +10,7 @@ source ~/.bashrc
 pip3 install --user ansible
 ~/.local/bin/ansible --version
 ~/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
-export MYSQL_DB=mysql+pymysql://root:1234@database:3306/fortune
-export MYSQL_ROOT_PASSWORD=1234
-export TEST_DB="mysql+pymysql://root:sqldatabase@34.89.57.102:3306/fortune"
+export MYSQL_DB="${MYSQL_DB}"
+export MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
+export TEST_DB="${TEST_DB}"
+docker-compose build
