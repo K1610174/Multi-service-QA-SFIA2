@@ -23,12 +23,3 @@
     - containerd.io
     state: latest
     update_cache: true 
-- name: 'Create docker group'
-  group:
-    name: "docker"
-    state: present
-- name: 'Adding user jenkins to docker group'
-  user:
-    name: "jenkins"
-    groups: "docker"
-    append: "yes"
