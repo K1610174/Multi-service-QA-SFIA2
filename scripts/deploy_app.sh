@@ -17,18 +17,14 @@ cd QA-SFIA2
 
 docker-compose down --rmi all
 docker-compose up -d 
-docker exec -it qa-sfia2_service1_1 python3 create.py   
-docker stack deploy --compose-file docker-compose.yaml appstack
 docker-compose ps
+docker exec -it qa-sfia2_service1_1 python3 create.py   
+
 docker container ls -a
-docker stack services appstack
+
 cd ..
 
-docker service scale appstack_service1=2
-docker service scale appstack_service2=2
-docker service scale appstack_service3=2
-docker service scale appstack_service4=2
-docker stack services appstack
+
 ls
 EOF
 #rm -rf QA-SFIA2
@@ -36,3 +32,11 @@ EOF
 #docker pull kkeki/service2:latest
 #docker pull kkeki/service3:latest
 #docker pull kkeki/service4:latest
+
+#docker stack deploy --compose-file docker-compose.yaml appstack
+#docker stack services appstack
+#docker service scale appstack_service1=2
+#docker service scale appstack_service2=2
+#docker service scale appstack_service3=2
+#docker service scale appstack_service4=2
+#docker stack services appstack
