@@ -2,7 +2,9 @@
 ssh manager-vm-1 << EOF
 sudo apt-get install -y python3-venv
 export TEST_DB="$TEST_DB"
-git clone https://github.com/K1610174/QA-SFIA2.git
+if [ ! -d QA-SFIA2 ]; then
+    git clone https://github.com/K1610174/QA-SFIA2.git
+fi
 
 
 cd QA-SFIA2
