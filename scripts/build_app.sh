@@ -13,5 +13,7 @@ pip3 install --user ansible
 
 echo "Now building ... "
 docker system prune -f
-docker-compose build
+docker-compose up -d --build
+docker-compose ps
+docker exec -it qa-sfia2_service1_1 python3 create.py
 docker images
