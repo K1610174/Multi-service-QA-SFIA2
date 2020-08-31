@@ -15,8 +15,8 @@ def generate():
     response2 = requests.get("http://service3:5002/starsign")    
     response3 = requests.post("http://service4:5003/fortune", json={'color':response1.text,'starsign':response2.text} ) 
 
-    fortune_entry=Fortunes(color=response1.text,starsign=response2.text,fortune=response3.text)
-    db.session.add(fortune_entry)
+    fortune=Fortunes(color=response1.text,starsign=response2.text,fortune=response3.text)
+    db.session.add(fortune)
     db.session.commit()
     
     return render_template('color.html',title='Fortunes',fortune=response3.text)
