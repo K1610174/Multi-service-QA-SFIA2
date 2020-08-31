@@ -1,3 +1,4 @@
+'''
 import unittest
 import time
 
@@ -55,3 +56,5 @@ class TestGetRandom(TestBase):
         time.sleep(1)
 
         assert url_for('home') in self.driver.current_url
+        
+'''
