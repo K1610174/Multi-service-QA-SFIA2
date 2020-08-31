@@ -5,10 +5,16 @@
 
 - hosts: swarm_manager
   become: true
+  vars:
+    swarm_info:
   roles:
     - swarm_manager
+  gather_facts: no
+  tasks: []
 
 - hosts: swarm_worker
   become: true
+  vars:
+    swarm_info:
   roles:
   - swarm_worker

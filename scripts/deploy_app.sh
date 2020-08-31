@@ -26,8 +26,7 @@ docker service scale appstack_service3=2
 docker service scale appstack_service4=2
 docker stack services appstack
 
-docker container ls -a
-
+docker-compose down --rmi all
 cd ..
 rm -rf QA-SFIA2
 EOF

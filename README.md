@@ -94,9 +94,21 @@ The Kanban board has MoSCoW prioritised tasks that are split into four stages ba
 
 ## TESTING 
 The testing for this appliaction was done using pytest.
-The test coverage for service one and service four are shown below.
+The test coverage for the service are shown below.
+
+##### Service One 
+  Testing the database can be accesssed.
+  Testing the requests being made.
+  Testing the function generates the correct response.
 
 ![](https://github.com/K1610174/QA-SFIA2/blob/master/images/service1_test_cov.PNG)
+
+##### Service Two, Service Three and Service Four
+ Testing the function generates the correct response.
+
+![](https://github.com/K1610174/QA-SFIA2/blob/master/images/test_service2.PNG)
+
+![](https://github.com/K1610174/QA-SFIA2/blob/master/images/service3_test.PNG)
 
 ![](https://github.com/K1610174/QA-SFIA2/blob/master/images/service4_test_cov.PNG)
 
