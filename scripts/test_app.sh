@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo apt-get install python3-venv
+sudo apt-get install -y python3-venv
 git clone https://github.com/K1610174/QA-SFIA2.git
 
 
