@@ -28,7 +28,7 @@ docker stack deploy --compose-file docker-compose.yaml appstack
 docker container ls -a
 docker stack services appstack
 cd ..
-rm -rf QA-SFIA2
+
 docker service scale appstack_service1=2
 docker service scale appstack_service2=2
 docker service scale appstack_service3=2
@@ -36,3 +36,4 @@ docker service scale appstack_service4=2
 docker stack services appstack
 ls
 EOF
+#rm -rf QA-SFIA2
