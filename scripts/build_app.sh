@@ -12,8 +12,9 @@
 ~/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
 
 echo "Now building ... "
-docker system prune -f
-docker-compose up -d --build
-docker-compose ps
+sudo groupadd -f docker
+sudo usermod -aG docker $(whoami)
+sudo chmod 666 /var/run/docker.sock
+docker-compose build
+docker-compose push
 #docker exec -t sfia2project_service1_1 python3 create.py
-docker images
