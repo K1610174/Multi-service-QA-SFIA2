@@ -13,6 +13,7 @@ pip3 install --user ansible
 
 echo "Now building ... "
 docker-compose build
+docker-compose ps
 docker exec -it qa-sfia2_service1_1 bash
 python3 create.py
 exit
