@@ -12,6 +12,11 @@ export MYSQL_DB="$MYSQL_DB"
 export MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD"
 git clone https://github.com/K1610174/QA-SFIA2.git
 cd QA-SFIA2
+docker-compose up -d
+docker-compose ps
+docker exec -it qa-sfia2_service1_1 bash
+python3 create.py
+exit
 docker stack deploy --compose-file docker-compose.yaml appstack
 docker stack services appstack
 cd ..
