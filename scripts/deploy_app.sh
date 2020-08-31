@@ -18,6 +18,7 @@ docker pull kkeki/service1:latest
 docker pull kkeki/service2:latest
 docker pull kkeki/service3:latest
 docker pull kkeki/service4:latest
+docker-compose build
 
 docker stack deploy --compose-file docker-compose.yaml appstack
 docker-compose ps
