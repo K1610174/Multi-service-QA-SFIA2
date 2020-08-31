@@ -14,11 +14,9 @@ export TEST_DB="$TEST_DB"
 
 git clone https://github.com/K1610174/QA-SFIA2.git
 cd QA-SFIA2
-docker pull kkeki/service1:latest
-docker pull kkeki/service2:latest
-docker pull kkeki/service3:latest
-docker pull kkeki/service4:latest
-docker-compose up -d --build
+
+docker-compose down --rmi all
+docker-compose up -d 
 docker exec -it qa-sfia2_service1_1 python3 create.py   
 docker stack deploy --compose-file docker-compose.yaml appstack
 docker-compose ps
@@ -34,3 +32,7 @@ docker stack services appstack
 ls
 EOF
 #rm -rf QA-SFIA2
+#docker pull kkeki/service1:latest
+#docker pull kkeki/service2:latest
+#docker pull kkeki/service3:latest
+#docker pull kkeki/service4:latest
