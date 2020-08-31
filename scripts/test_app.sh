@@ -1,5 +1,5 @@
 #! /bin/bash
-ssh manager-vm-1 << EOF
+
 sudo apt-get install -y python3-venv
 export TEST_DB="$TEST_DB"
 
@@ -10,7 +10,6 @@ cd QA-SFIA2
 cd service1
 python3 -m venv venv
 . venv/bin/activate
-pip3 install wheel
 pip3 install -r requirements.txt
 python3 -m pytest --cov application --cov-report term-missing
 cd ..
@@ -41,4 +40,3 @@ cd ..
 
 cd ..
 rm -rf QA-SFIA2
-EOF

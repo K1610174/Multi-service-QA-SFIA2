@@ -15,5 +15,5 @@ echo "Now building ... "
 docker system prune -f
 docker-compose up -d --build
 docker-compose ps
-docker exec -t sfia2project_service1_1 python3 create.py
+#docker exec -t sfia2project_service1_1 python3 create.py
 docker images
