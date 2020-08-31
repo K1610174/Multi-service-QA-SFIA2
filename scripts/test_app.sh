@@ -1,4 +1,9 @@
 #! /bin/bash
+
+if ![-d QA-SFIA2]; then
+    git clone https://github.com/K1610174/QA-SFIA2.git
+fi
+
 cd QA-SFIA2
 #test service1
 cd service1
