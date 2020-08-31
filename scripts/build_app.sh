@@ -12,4 +12,8 @@ pip3 install --user ansible
 ~/.local/bin/ansible-playbook -i inventory.cfg playbook.yaml
 
 echo "Now building ... "
+docker system prune -f
 docker-compose build
+docker images
+docker login 
+docker-compose push
