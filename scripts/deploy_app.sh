@@ -18,8 +18,8 @@ docker pull kkeki/service1:latest
 docker pull kkeki/service2:latest
 docker pull kkeki/service3:latest
 docker pull kkeki/service4:latest
-docker-compose build
-
+docker-compose up -d --build
+docker exec -it qa-sfia2_service1_1 python3 create.py   
 docker stack deploy --compose-file docker-compose.yaml appstack
 docker-compose ps
 docker container ls -a
