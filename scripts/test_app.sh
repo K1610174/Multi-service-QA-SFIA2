@@ -1,8 +1,8 @@
 #! /bin/bash
 
-if ![-d QA-SFIA2]; then
-    git clone https://github.com/K1610174/QA-SFIA2.git
-fi
+
+git clone https://github.com/K1610174/QA-SFIA2.git
+
 
 cd QA-SFIA2
 #test service1
@@ -36,3 +36,6 @@ python -m venv venv
 pip3 install -r requirements.txt
 python3 -m pytest --cov application --cov-report term-missing
 cd ..
+
+cd ..
+rm -r QA-SFIA2
