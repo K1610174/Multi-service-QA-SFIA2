@@ -23,6 +23,8 @@ This application generates a fortune for the user using the four different servi
 * Service three: This back-end service returns a random starsign such as Scorpio to service one. This result will also be used in service four.
   
 * Service four: This back-end service uses the information that has been post from service one, using combination logic to generate a fortune result that can then be displayed to the user.
+
+  ![](https://github.com/K1610174/QA-SFIA2/blob/master/images/app_strcuture.PNG)
   
 For this product to be delivered on time I used MoSCoW analysis to prioritise my workload. 
 
