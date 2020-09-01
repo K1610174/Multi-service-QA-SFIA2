@@ -2,7 +2,7 @@
 
 ## BRIEF
 ### Objective
-This project is the development of a multi-services application that uses a fron-end service that communicates with three other services creating an API that also interacts with a database to give the user a fortune.
+This project is the development of a multi-services application that uses a front-end service that communicates with three other services creating an API that also interacts with a database to give the user a fortune.
 
 ### Requirements
 - Kanban Board - JIRA
