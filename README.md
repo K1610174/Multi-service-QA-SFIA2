@@ -51,6 +51,8 @@ Could have:
 
 ![](https://github.com/K1610174/QA-SFIA2/blob/master/images/database.PNG)
 
+![](https://github.com/K1610174/QA-SFIA2/blob/master/images/database_working.PNG)
+
 ## ARCHITECTURE
 ### CI PIPELINE
 #### Source Code
