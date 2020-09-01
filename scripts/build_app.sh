@@ -14,6 +14,6 @@ pip3 install --user ansible
 echo "Now building ... "
 sudo groupadd -f docker
 sudo usermod -aG docker $(whoami)
-sudo chmod 666 /var/run/docker.sock
+#sudo chmod 666 /var/run/docker.sock
 docker-compose build
 
