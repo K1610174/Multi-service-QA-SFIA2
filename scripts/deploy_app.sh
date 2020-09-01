@@ -14,12 +14,6 @@ export TEST_DB="$TEST_DB"
 git clone https://github.com/K1610174/QA-SFIA2.git
 cd QA-SFIA2
 
-docker pull kkeki/service1:latest
-docker pull kkeki/service2:latest
-docker pull kkeki/service3:latest
-docker pull kkeki/service4:latest
-docker pull kkeki/database:latest
-
 docker stack deploy --compose-file docker-compose.yaml appstack
 docker service scale appstack_service1=2
 docker service scale appstack_service2=2
